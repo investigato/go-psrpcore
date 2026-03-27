@@ -10,11 +10,11 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	fragments "github.com/investigato/go-psrpcorefragments"
-	host "github.com/investigato/go-psrpcorehost"
-	messages "github.com/investigato/go-psrpcoremessages"
-	objects "github.com/investigato/go-psrpcoreobjects"
-	serialization "github.com/investigato/go-psrpcoreserialization"
+	fragments "github.com/investigato/go-psrpcore/fragments"
+	host "github.com/investigato/go-psrpcore/host"
+	messages "github.com/investigato/go-psrpcore/messages"
+	objects "github.com/investigato/go-psrpcore/objects"
+	serialization "github.com/investigato/go-psrpcore/serialization"
 )
 
 var (

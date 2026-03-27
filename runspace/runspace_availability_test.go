@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	messages "github.com/investigato/go-psrpcoremessages"
+	messages "github.com/investigato/go-psrpcore/messages"
 )
 
 func TestParseRunspaceAvailability(t *testing.T) {

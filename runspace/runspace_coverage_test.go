@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	messages "github.com/investigato/go-psrpcoremessages"
+	messages "github.com/investigato/go-psrpcore/messages"
 )
 
 // TestSetLogger verifies the SetLogger method

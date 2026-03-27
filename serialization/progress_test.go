@@ -3,7 +3,7 @@ package serialization
 import (
 	"testing"
 
-	objects "github.com/investigato/go-psrpcoreobjects"
+	objects "github.com/investigato/go-psrpcore/objects"
 )
 
 func TestProgressRecordRoundTrip(t *testing.T) {

@@ -7,7 +7,7 @@ linters-settings:
   govet:
     shadow: true
   gocyclo:
-    min-complexity: 40  # Raised: deserializers are inherently complex
+    min-complexity: 40 # Raised: deserializers are inherently complex
   dupl:
     threshold: 100
   goconst:
@@ -49,7 +49,6 @@ linters:
     - errcheck
 
 issues:
-  exclude-use-default: false
   max-issues-per-linter: 0
   max-same-issues: 0
   exclude-rules:

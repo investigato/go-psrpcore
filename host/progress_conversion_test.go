@@ -3,8 +3,8 @@ package host
 import (
 	"testing"
 
-	objects "github.com/investigato/go-psrpcoreobjects"
-	serialization "github.com/investigato/go-psrpcoreserialization"
+	objects "github.com/investigato/go-psrpcore/objects"
+	serialization "github.com/investigato/go-psrpcore/serialization"
 )
 
 func TestConvertToProgressRecord(t *testing.T) {

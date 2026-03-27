@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	host "github.com/investigato/go-psrpcorehost"
-	messages "github.com/investigato/go-psrpcoremessages"
-	serialization "github.com/investigato/go-psrpcoreserialization"
+	host "github.com/investigato/go-psrpcore/host"
+	messages "github.com/investigato/go-psrpcore/messages"
+	serialization "github.com/investigato/go-psrpcore/serialization"
 )
 
 // mockTransport is a mock implementation of Transport for testing.
