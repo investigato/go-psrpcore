@@ -71,8 +71,8 @@ For non-interactive scenarios, use the `NullHost`:
 
 ```go
 import (
-    "github.com/smnsjas/go-psrpcore/runspace"
-    "github.com/smnsjas/go-psrpcore/host"
+    "github.com/investigato/go-psrpcorerunspace"
+    "github.com/investigato/go-psrpcorehost"
 )
 
 // Create pool with default NullHost
@@ -96,8 +96,8 @@ import (
     "fmt"
     "os"
 
-    "github.com/smnsjas/go-psrpcore/host"
-    "github.com/smnsjas/go-psrpcore/objects"
+    "github.com/investigato/go-psrpcorehost"
+    "github.com/investigato/go-psrpcoreobjects"
 )
 
 // InteractiveHost implements host.Host for terminal interaction

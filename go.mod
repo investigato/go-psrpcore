@@ -1,4 +1,4 @@
-module github.com/smnsjas/go-psrpcore
+module github.com/investigato/go-psrpcore
 
 go 1.25.0
 

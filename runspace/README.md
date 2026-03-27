@@ -113,7 +113,7 @@ The RunspacePool automatically handles host callbacks during initialization and 
 For interactive sessions that require user input (prompts, credentials, etc.), provide a custom `Host` implementation:
 
 ```go
-import "github.com/smnsjas/go-psrpcore/host"
+import "github.com/investigato/go-psrpcorehost"
 
 // Create pool
 pool := runspace.New(transport, uuid.New())

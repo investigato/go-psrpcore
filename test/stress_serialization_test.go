@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/smnsjas/go-psrpcore/serialization"
+	"github.com/investigato/go-psrpcore/serialization"
 )
 
 // TestSerializeUnsafeConcurrency verifies that SerializeUnsafe is safe to use

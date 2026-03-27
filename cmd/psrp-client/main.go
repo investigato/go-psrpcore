@@ -14,9 +14,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/smnsjas/go-psrpcore/host"
-	"github.com/smnsjas/go-psrpcore/outofproc"
-	"github.com/smnsjas/go-psrpcore/runspace"
+	"github.com/investigato/go-psrpcore/host"
+	"github.com/investigato/go-psrpcore/outofproc"
+	"github.com/investigato/go-psrpcore/runspace"
 )
 
 // ProcessPipes holds the stdin/stdout of a child process.

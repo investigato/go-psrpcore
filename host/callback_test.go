@@ -3,8 +3,8 @@ package host
 import (
 	"testing"
 
-	"github.com/smnsjas/go-psrpcore/objects"
-	"github.com/smnsjas/go-psrpcore/serialization"
+	"github.com/investigato/go-psrpcore/objects"
+	"github.com/investigato/go-psrpcore/serialization"
 )
 
 // mockHost implements Host for testing

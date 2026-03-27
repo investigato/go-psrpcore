@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/smnsjas/go-psrpcore/objects"
+	"github.com/investigato/go-psrpcore/objects"
 )
 
 // mockEncryptor implements EncryptionProvider for testing.

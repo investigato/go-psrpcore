@@ -7,10 +7,10 @@ import (
 	"testing"
 
 	"github.com/google/uuid"
-	"github.com/smnsjas/go-psrpcore/fragments"
-	"github.com/smnsjas/go-psrpcore/messages"
-	"github.com/smnsjas/go-psrpcore/outofproc"
-	"github.com/smnsjas/go-psrpcore/serialization"
+	fragments "github.com/investigato/go-psrpcorefragments"
+	messages "github.com/investigato/go-psrpcoremessages"
+	outofproc "github.com/investigato/go-psrpcoreoutofproc"
+	serialization "github.com/investigato/go-psrpcoreserialization"
 )
 
 // Baseline Benchmark Suite

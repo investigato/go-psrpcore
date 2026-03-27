@@ -1,8 +1,8 @@
 # go-psrpcore
 
 <!-- markdownlint-disable MD013 -->
-[![Go Reference](https://pkg.go.dev/badge/github.com/smnsjas/go-psrpcore.svg)](https://pkg.go.dev/github.com/smnsjas/go-psrpcore)
-[![Go Report Card](https://goreportcard.com/badge/github.com/smnsjas/go-psrpcore)](https://goreportcard.com/report/github.com/smnsjas/go-psrpcore)
+[![Go Reference](https://pkg.go.dev/badge/github.com/investigato/go-psrpcore.svg)](https://pkg.go.dev/github.com/investigato/go-psrpcore)
+[![Go Report Card](https://goreportcard.com/badge/github.com/investigato/go-psrpcore)](https://goreportcard.com/report/github.com/investigato/go-psrpcore)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <!-- markdownlint-enable MD013 -->
 
@@ -46,7 +46,7 @@ Your Application
 ## Installation
 
 ```bash
-go get github.com/smnsjas/go-psrpcore
+go get github.com/investigato/go-psrpcore
 ```
 
 ## Quick Start
@@ -59,7 +59,7 @@ import (
     "fmt"
     "io"
 
-    "github.com/smnsjas/go-psrpcore"
+    "github.com/investigato/go-psrpcore"
 )
 
 func main() {
@@ -98,8 +98,8 @@ This library is designed to be composed with transport implementations:
 
 | Transport | Use Case | Example Project |
 | --------- | -------- | --------------- |
-| **AF_HYPERV / VMBus** | PowerShell Direct to Hyper-V VMs | [go-psrp](https://github.com/smnsjas/go-psrp) |
-| **WSMan / HTTP(S)** | Traditional WinRM remoting | [go-psrp](https://github.com/smnsjas/go-psrp) |
+| **AF_HYPERV / VMBus** | PowerShell Direct to Hyper-V VMs | [go-psrp](https://github.com/investigato/go-psrp) |
+| **WSMan / HTTP(S)** | Traditional WinRM remoting | [go-psrp](https://github.com/investigato/go-psrp) |
 | **SSH** | PowerShell Core remoting | Use `golang.org/x/crypto/ssh` |
 | **Named Pipes** | Local PowerShell remoting | Use OS-specific pipe APIs |
 

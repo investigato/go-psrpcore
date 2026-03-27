@@ -10,11 +10,11 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/smnsjas/go-psrpcore/fragments"
-	"github.com/smnsjas/go-psrpcore/host"
-	"github.com/smnsjas/go-psrpcore/messages"
-	"github.com/smnsjas/go-psrpcore/pipeline"
-	"github.com/smnsjas/go-psrpcore/serialization"
+	fragments "github.com/investigato/go-psrpcorefragments"
+	host "github.com/investigato/go-psrpcorehost"
+	messages "github.com/investigato/go-psrpcoremessages"
+	pipeline "github.com/investigato/go-psrpcorepipeline"
+	serialization "github.com/investigato/go-psrpcoreserialization"
 )
 
 // mockTransport is a mock transport for testing.

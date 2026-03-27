@@ -27,7 +27,7 @@
 // MS-PSRP Section 2.2.3.17: https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-psrp/
 package host
 
-import "github.com/smnsjas/go-psrpcore/objects"
+import objects "github.com/investigato/go-psrpcoreobjects"
 
 // Host defines the interface for handling PowerShell host callbacks.
 type Host interface {

@@ -61,7 +61,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/smnsjas/go-psrpcore/objects"
+	objects "github.com/investigato/go-psrpcoreobjects"
 )
 
 // PSRPEnum represents a .NET Enum for serialization.

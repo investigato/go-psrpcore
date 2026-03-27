@@ -3,8 +3,8 @@ package host
 import (
 	"fmt"
 
-	"github.com/smnsjas/go-psrpcore/objects"
-	"github.com/smnsjas/go-psrpcore/serialization"
+	objects "github.com/investigato/go-psrpcore/objects"
+	serialization "github.com/investigato/go-psrpcore/serialization"
 )
 
 // convertToProgressRecord converts a PSObject or map to a ProgressRecord.

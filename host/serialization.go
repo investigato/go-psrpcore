@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/smnsjas/go-psrpcore/serialization"
+	serialization "github.com/investigato/go-psrpcoreserialization"
 )
 
 // EncodeRemoteHostCall serializes a RemoteHostCall to CLIXML bytes.

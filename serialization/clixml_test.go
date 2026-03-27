@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/smnsjas/go-psrpcore/objects"
+	objects "github.com/investigato/go-psrpcoreobjects"
 )
 
 func TestSerializePrimitives(t *testing.T) {

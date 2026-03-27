@@ -257,8 +257,8 @@ Update the serializer to use the session key encryption provider:
 package serialization
 
 import (
-    "github.com/smnsjas/go-psrpcore/crypto"
-    "github.com/smnsjas/go-psrpcore/objects"
+    "github.com/investigato/go-psrpcorecrypto"
+    "github.com/investigato/go-psrpcoreobjects"
 )
 
 // Example usage:
