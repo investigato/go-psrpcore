@@ -1030,7 +1030,7 @@ func (p *Pool) createRunspacePoolInitXML(minRunspaces, maxRunspaces int) string 
 		`<B N="_isHostRawUINull">true</B>`+
 		`<B N="_useRunspaceHost">true</B>`+
 		`</MS></Obj>`+
-		`<Nil N="ApplicationArguments"/>`+
+		// `<Nil N="ApplicationArguments"/>`+
 		`<Obj N="ApplicationPrivateData" RefId="4"><MS>`+
 		`<B N="PSVersionTable">true</B>`+
 		`</MS></Obj>`+
