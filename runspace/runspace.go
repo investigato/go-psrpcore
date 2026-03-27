@@ -1021,7 +1021,8 @@ func (p *Pool) createRunspacePoolInitXML(minRunspaces, maxRunspaces int) string 
 		`<T>System.Enum</T><T>System.ValueType</T><T>System.Object</T></TN>`+
 		`<ToString>Default</ToString><I32>0</I32></Obj>`+
 		`<Obj N="ApartmentState" RefId="2">`+
-		`<TN RefId="1"><T>System.Threading.ApartmentState</T>`+
+		// `<TN RefId="1"><T>System.Threading.ApartmentState</T>`+
+		`<TN RefId="1"><T>System.Management.Automation.Runspaces.ApartmentState</T>`+
 		`<T>System.Enum</T><T>System.ValueType</T><T>System.Object</T></TN>`+
 		`<ToString>Unknown</ToString><I32>2</I32></Obj>`+
 		`<Obj N="HostInfo" RefId="3"><MS>`+
@@ -1030,7 +1031,7 @@ func (p *Pool) createRunspacePoolInitXML(minRunspaces, maxRunspaces int) string 
 		`<B N="_isHostRawUINull">true</B>`+
 		`<B N="_useRunspaceHost">true</B>`+
 		`</MS></Obj>`+
-		// `<Nil N="ApplicationArguments"/>`+
+		`<Nil N="ApplicationArguments"/>`+
 		`<Obj N="ApplicationPrivateData" RefId="4"><MS>`+
 		`<B N="PSVersionTable">true</B>`+
 		`</MS></Obj>`+
