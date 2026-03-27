@@ -269,9 +269,42 @@ func New(transport io.ReadWriter, id uuid.UUID) *Pool {
 	return NewWithContext(context.Background(), transport, id)
 }
 
+// OpenWSMan(ctx context.Context) error performs the WSMan-specific opening sequence for the runspace pool.
+func (p *Pool) OpenWSMan(ctx context.Context) error {
+
+	// SESSION_CAPABILITY
+	if err := p.sendSessionCapability(ctx); err != nil {
+		p.setBroken()
+		return fmt.Errorf("send session capability: %w", err)
+	}
+
+	// SESSION_CAPABILITY response
+	if err := p.receiveSessionCapability(ctx); err != nil {
+		p.setBroken()
+		return fmt.Errorf("receive session capability: %w", err)
+	}
+	// INIT_RUNSPACEPOOL
+	if err := p.sendInitRunspacePool(ctx); err != nil {
+		p.setBroken()
+		return fmt.Errorf("send init runspace pool: %w", err)
+	}
+	// Wait for opened
+	if err := p.waitForOpened(ctx); err != nil {
+		p.setBroken()
+		return fmt.Errorf("wait for opened: %w", err)
+	}
+	// Do NOT start the dispatchLoop for this one
+	// Sets pool state to Opened on success
+	p.mu.Lock()
+	p.setState(StateOpened)
+	p.mu.Unlock()
+	return nil
+}
+
 // SetHost sets the host implementation for handling host callbacks.
 // This allows the caller to provide a custom Host implementation for interactive sessions.
 // Must be called before Open().
+
 func (p *Pool) SetHost(h host.Host) error {
 	p.mu.Lock()
 	defer p.mu.Unlock()
