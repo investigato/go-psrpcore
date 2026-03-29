@@ -278,28 +278,39 @@ func New(transport io.ReadWriter, id uuid.UUID) *Pool {
 // 		return fmt.Errorf("send session capability: %w", err)
 // 	}
 
-// 	// SESSION_CAPABILITY response
-// 	if err := p.receiveSessionCapability(ctx); err != nil {
-// 		p.setBroken()
-// 		return fmt.Errorf("receive session capability: %w", err)
-// 	}
-// 	// INIT_RUNSPACEPOOL
-// 	if err := p.sendInitRunspacePool(ctx); err != nil {
-// 		p.setBroken()
-// 		return fmt.Errorf("send init runspace pool: %w", err)
-// 	}
-// 	// Wait for opened
-// 	if err := p.waitForOpened(ctx); err != nil {
-// 		p.setBroken()
-// 		return fmt.Errorf("wait for opened: %w", err)
-// 	}
-// 	// Do NOT start the dispatchLoop for this one
-// 	// Sets pool state to Opened on success
-// 	p.mu.Lock()
-// 	p.setState(StateOpened)
-// 	p.mu.Unlock()
-// 	return nil
-// }
+//		// SESSION_CAPABILITY response
+//		if err := p.receiveSessionCapability(ctx); err != nil {
+//			p.setBroken()
+//			return fmt.Errorf("receive session capability: %w", err)
+//		}
+//		// INIT_RUNSPACEPOOL
+//		if err := p.sendInitRunspacePool(ctx); err != nil {
+//			p.setBroken()
+//			return fmt.Errorf("send init runspace pool: %w", err)
+//		}
+//		// Wait for opened
+//		if err := p.waitForOpened(ctx); err != nil {
+//			p.setBroken()
+//			return fmt.Errorf("wait for opened: %w", err)
+//		}
+//		// Do NOT start the dispatchLoop for this one
+//		// Sets pool state to Opened on success
+//		p.mu.Lock()
+//		p.setState(StateOpened)
+//		p.mu.Unlock()
+//		return nil
+//	}
+//
+// ReceiveHandshakeWSMan waits for the server to confirm the runspace pool is opened,
+// without sending SESSION_CAPABILITY or INIT_RUNSPACEPOOL first. Use this after
+// CreateShell with creationXml — the server already processed the handshake fragments.
+func (p *Pool) ReceiveHandshakeWSMan(ctx context.Context) error {
+	if err := p.waitForOpened(ctx); err != nil {
+		p.setBroken()
+		return fmt.Errorf("wait for opened: %w", err)
+	}
+	return nil
+}
 
 // SetHost sets the host implementation for handling host callbacks.
 // This allows the caller to provide a custom Host implementation for interactive sessions.
