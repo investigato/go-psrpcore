@@ -516,6 +516,9 @@ func (p *Pipeline) SendInput(ctx context.Context, data interface{}) error {
 // CloseInput closes the pipeline's input stream.
 // It sends an END_OF_PIPELINE_INPUT message (MS-PSRP 2.2.2.13).
 func (p *Pipeline) CloseInput(ctx context.Context) error {
+	 if p.skipInvokeSend {
+      return nil
+  }
 	p.mu.Lock()
 	if p.state != StateRunning {
 		p.mu.Unlock()
