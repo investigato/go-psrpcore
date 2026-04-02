@@ -1709,7 +1709,13 @@ func (d *Deserializer) deserializeObject(se xml.StartElement) (interface{}, erro
 				if err != nil {
 					return nil, err
 				}
-				obj.Properties = props
+				if obj.Properties == nil {
+					obj.Properties = props
+				} else {
+					for k, v := range props {
+						obj.Properties[k] = v
+					}
+				}
 
 			case elemDCT: // Dictionary
 				hasDict = true
